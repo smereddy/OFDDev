@@ -1,0 +1,154 @@
+body {
+  background-color: #ebeff2;
+  overflow-x: hidden;
+}
+
+.panel-default {
+  margin: 10px;
+}
+
+.asset-noty {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.thumbnail-dash {
+  height: 100px;
+  width: 100px;
+  text-align: center; 
+
+  background-color: #e6e6e6;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+
+}
+
+.thumbnail {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.thumbnail:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.thumbnail:hover > .thumbnail-dash {
+  background-color: #1565c0;
+}
+
+.thumbnail:hover > .thumbnail-dash > i  {
+  color: #e6e6e6;
+}
+
+.shadow {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.shadow-soft {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.10);
+}
+
+.large-category {
+  padding: 0 6px 0 6px;
+}
+
+.thumbnail-dash > i {
+  color: #1565c0;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.caption > h3 {
+  text-align: center;
+}
+
+.cal {
+  background-color: white;
+  width: 48%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+.pill-container {
+  width: auto;
+  margin: 10px;
+}
+
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+  color : black;
+  background-color: white;
+  padding : 5px 15px;
+  border-radius: 0 4px 4px 4px ;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  background-color: white;
+  color: black;
+}
+
+.panel {
+  border-radius:0px;
+}
+
+.panel-shadow {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.10);
+}
+
+.tab-content {
+  background-color: white;
+  padding: 10px;
+}
+
+.tab-contanier {
+  margin: 10px;
+}
+
+.nav-pills > li > a {
+  border-radius: 4px 4px 0 0;
+}
+
+.btn-new {
+  background-color: #1976d2; 
+  border-color: #1565c0;
+  color: white;
+}
+
+.btn-new:hover {
+  background-color: #1565c0; 
+  border-color: #1565c0;
+  color: white;
+}
+
+.tab-pane {
+  padding: 10px;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.panel-border {
+  border-top: 2px solid #1976d2;
+  border-radius: 0;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #e8e5e5;
+}
+
+.panel-heading {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#currency {
+  text-align: right;
+}

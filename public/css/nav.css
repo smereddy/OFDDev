@@ -1,0 +1,73 @@
+.navbar-brand {
+  padding-top: 5px;
+
+}
+
+.navbar {
+  background-color: #1565c0;
+  border-bottom: 1px solid #0d47a1;
+  /*box-shadow: 0 8px 6px -6px #999;*/
+}
+
+
+.navbar-default .navbar-nav>li>a {
+  color: white;
+  overflow-y: hidden;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: white;
+  background-color: #0d47a1;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  color: white;
+  background-color: #0d47a1;
+}
+
+.sub-nav {
+  height: 60px; 
+  line-height: 60px; 
+  background-color: #1976d2; 
+  display: block;"
+}
+
+.nav-view {
+  float: left;
+  color: white;
+  padding-left: 15px;
+  padding-top: 10px;
+
+  vertical-align: middle;
+  line-height: 14px;
+
+  font-size: 150%;
+  font-weight: 200;
+}
+
+.breadcrumb {
+  background-color: transparent;
+}
+
+.breadcrumb > li {
+  font-size: 17px;
+}
+
+.breadcrumb > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb > .active {
+  color: white;
+}
+
+.nav-user {
+  float: right;
+  padding-right: 15px;
+  padding-top: 20px;
+  color: white;
+
+  vertical-align: middle;
+  line-height: 14px;
+}
