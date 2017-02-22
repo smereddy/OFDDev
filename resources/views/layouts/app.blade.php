@@ -1,14 +1,14 @@
 @include('partials.header')
 @include('partials.navbar')
 
-<div class="sub-nav row" style="margin-top: -25px;">
-  <div class="col-md-12">
-    <span class="nav-view">@yield('crumbs')</span>
-    <span class="nav-user">
+{{--<div class="sub-nav row" style="margin-top: -25px;">--}}
+  {{--<div class="col-md-12">--}}
+    {{--<span class="nav-view">@yield('crumbs')</span>--}}
+    {{--<span class="nav-user">--}}
 
-    </span>
-  </div>
-</div>
+    {{--</span>--}}
+  {{--</div>--}}
+{{--</div>--}}
 
 @if(isset($siteTitle))
     <h3 class="page-title">
