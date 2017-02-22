@@ -19,16 +19,14 @@
         </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="Create"><a href="{{ route('all_assets.create') }}"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
-        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="Inactive"><a href="{{ url('trashes') }}"><i class="fa fa-bell-slash" aria-hidden="true"></i></a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome, {{ Auth::user()->name }}! <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="{{ route('users.index') }}">Manage</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#logout" onclick="$('#logout').submit();">Logout</a></li>
-          </ul>
-        </li>
+        {{--<li class="dropdown">--}}
+          {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome, {{ Auth::user()->name }}! <span class="caret"></span></a>--}}
+          {{--<ul class="dropdown-menu">--}}
+            {{--<li><a href="{{ route('users.index') }}">Manage</a></li>--}}
+            {{--<li role="separator" class="divider"></li>--}}
+            {{--<li><a href="#logout" onclick="$('#logout').submit();">Logout</a></li>--}}
+          {{--</ul>--}}
+        {{--</li>--}}
       </ul>
     </div>
   </div>
