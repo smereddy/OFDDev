@@ -16,13 +16,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="{{ url('/') }}"><strong>OMAHA FIRE DEPARTMENT</strong></a></li>
-        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="All Assets"><a href="{{ route('all_assets.index') }}"><i class="fa fa-th fa-lg" aria-hidden="true"></i></a></li>
-        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="Stations"><a href="{{ route('stations.index') }}"><i class="fa fa-building fa-lg" aria-hidden="true"></i></a></li>
-        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="Vehicles"><a href="{{ route('vehicles.index') }}"><i class="fa fa-ambulance fa-lg" aria-hidden="true"></i></a></li>
-        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="Service"><a href="{{ route('repairs.index') }}"><i class="fa fa-wrench fa-lg" aria-hidden="true"></i></a></li>
-        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="Vendor"><a href="{{ route('vendors.index') }}"><i class="fa fa-tags" aria-hidden="true"></i></a></li>
-        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="Grants"><a href="{{ route('grants.index') }}"><i class="fa fa-usd fa-lg" aria-hidden="true"></i></a></li>
-      </ul>
+        </ul>
       
       <ul class="nav navbar-nav navbar-right">
         <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="Create"><a href="{{ route('all_assets.create') }}"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
