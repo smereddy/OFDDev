@@ -11,12 +11,18 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ url('/img/c40.png') }}"></a>
+
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="{{ url('/') }}"><strong>OMAHA FIRE DEPARTMENT</strong></a></li>
-        </ul>
+        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="Home"><a href=""><i class="fa fa-home fa-lg" aria-hidden="true"></i></a></li>
+        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="OFD 6"><a href=""><i class="fa fa-medkit fa-lg" aria-hidden="true"></i></a></li>
+        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="OFD 6A"><a href=""><i class="fa fa-ambulance fa-lg" aria-hidden="true"></i></a></li>
+        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="OFD 6B"><a href=""><i class="fa fa-exclamation-triangle fa-lg" aria-hidden="true"></i></a></li>
+        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="OFD 6C"><a href=""><i class="fa fa-plus-square fa-tags" aria-hidden="true"></i></a></li>
+      </ul>
       
       <ul class="nav navbar-nav navbar-right">
         {{--<li class="dropdown">--}}
