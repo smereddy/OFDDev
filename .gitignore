@@ -1,14 +1,17 @@
-
-.idea/*
-/vendor
 /node_modules
 /public/storage
 Homestead.yaml
 Homestead.json
 .env
 # Intellij
-.idea/
-.idea/workspace.xml
-*.iml
 *.iws
-
+/bootstrap/compiled.php
+/.idea
+public/storage
+public/hot
+storage/*.key
+.env.*.php
+.env.php
+vendor/
+node_modules/
+npm-debug.log
