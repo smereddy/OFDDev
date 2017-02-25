@@ -7,12 +7,12 @@
 
             <div class="row">
                 <div class="col-md-2">
-                    <img src="images/logo.png" style="width:120px;height:150px;padding-top:10px">
+                    <img src="{{asset('img/login.png')}}">
                 </div>
                 <div class="col-md-10">
                     <div class="col-md-12">
                         <div class="page-header1">
-                            <h3><strong>I.O.D. Report Tracking Document (OFD-6)</h3>
+                            <h3><strong>I.O.D. Report Tracking Document (OFD-6)</strong></h3>
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -35,7 +35,6 @@
                 </div>
             </div>
         </div>
-        {!! Form::open(['url' => 'ofd6']) !!}
         <form class="form-horizontal">
             <div class="col-sm-4">
                 <div class="form-group">
@@ -177,11 +176,11 @@
                     <div class="col-sm-2">
                         <button type="button" class="btn btn-info dropdown-toggle col-sm-12" data-toggle="modal"
                                 data-target="#myModal">
-                            <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
+                            <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload</button>
                     </div>
                     <div class="col-sm-2">
                         <button class="btn btn-primary dropdown-toggle col-sm-12" type="button" data-toggle="dropdown">
-                            <i class="fa fa-search" aria-hidden="true"></i> Retrieve
+                            <i class="fa fa-search" aria-hidden="true"></i> Retrieve</button>
                     </div>
                 </div>
             </div>
@@ -199,11 +198,11 @@
                     <div class="col-sm-2">
                         <button type="button" class="btn btn-info dropdown-toggle col-sm-12" data-toggle="modal"
                                 data-target="#myModal">
-                             <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
+                            <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload</button>
                     </div>
                     <div class="col-sm-2">
                         <button class="btn btn-primary dropdown-toggle col-sm-12" type="button">
-                            <i class="fa fa-search" aria-hidden="true"></i> Retrieve
+                            <i class="fa fa-search" aria-hidden="true"></i> Retrieve</button>
                     </div>
                 </div>
             </div>
@@ -220,11 +219,11 @@
                     <div class="col-sm-2">
                         <button type="button" class="btn btn-info dropdown-toggle col-sm-12" data-toggle="modal"
                                 data-target="#myModal">
-                            <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
+                            <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload</button>
                     </div>
                     <div class="col-sm-2">
                         <button class="btn btn-primary dropdown-toggle col-sm-12" type="button" data-toggle="dropdown">
-                            <i class="fa fa-search" aria-hidden="true"></i> Retrieve
+                            <i class="fa fa-search" aria-hidden="true"></i> Retrieve</button>
                     </div>
                 </div>
             </div>
@@ -242,11 +241,11 @@
                     <div class="col-sm-2">
                         <button type="button" class="btn btn-info dropdown-toggle col-sm-12" data-toggle="modal"
                                 data-target="#myModal">
-                            <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
+                            <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload</button>
                     </div>
                     <div class="col-sm-2">
                         <button class="btn btn-primary dropdown-toggle col-sm-12" type="button" data-toggle="dropdown">
-                            <i class="fa fa-search" aria-hidden="true"></i> Retrieve
+                            <i class="fa fa-search" aria-hidden="true"></i> Retrieve</button>
                     </div>
                 </div>
             </div>
@@ -264,11 +263,11 @@
                     <div class="col-sm-2">
                         <button type="button" class="btn btn-info dropdown-toggle col-sm-12" data-toggle="modal"
                                 data-target="#myModal">
-                            <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
+                            <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload</button>
                     </div>
                     <div class="col-sm-2">
                         <button class="btn btn-primary dropdown-toggle col-sm-12" type="button" data-toggle="dropdown">
-                            <i class="fa fa-search" aria-hidden="true"></i> Retrieve
+                            <i class="fa fa-search" aria-hidden="true"></i> Retrieve</button>
                     </div>
                 </div>
             </div>
