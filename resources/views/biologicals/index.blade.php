@@ -111,7 +111,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-4 form-group">
-                    {!! Form::label('station_name', 'Primary IDCO', ['class' => 'col-sm-4 control-label']) !!}
+                    {!! Form::label('station_name', 'Primary IDCO #', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
                         {!! Form::text('idconumber', old('station_name'), ['class' => 'form-control'])!!}
                         <p class="help-block"></p>
@@ -166,8 +166,10 @@
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-6"><input type="checkbox"><strong>Complete OFD
-                                        184</strong></label>
+                            {{ Form::checkbox('trueOFD184', 1, null, ['id' => 'trueOFD184', 'class'=>'className', 'required'=>'required']) }}
+                            {{Form::label('trueOFD184','Complete OFD 184')}}
+                             </div>
+                        </div>
                                 <div class="col-sm-2">
                                     <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
                                        href="/download/a.txt">
@@ -183,46 +185,49 @@
                                 <div class="col-sm-2">
                                     <a href="uploads/OFD6a">Uploads/firefighters3/january/OFD6a.pdf </a>
                                 </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                {{ Form::checkbox('bloodReport', 1, null, ['id' => 'bloodReport', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('bloodReport','Report for blood draw as directed by OUCH Nurse')}}
+
                             </div>
                         </div>
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Report for blood
-                                        draw as directed by OUCH Nurse</strong></label>
+                                {{ Form::checkbox('exposureTab', 1, null, ['id' => 'exposureTab', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('exposureTab','Complete Exposure tab in ePCR ')}}
+
                             </div>
                         </div>
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Complete Exposure
-                                        tab in ePCR </strong></label>
-                            </div>
-                        </div>
+                                {{ Form::checkbox('trueBagTag', 1, null, ['id' => 'trueBagTag', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('trueBagTag','Bag & Tag clothing if applicable - send email to PSS with pick-up location ')}}
 
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Bag & Tag
-                                        clothing if applicable - send email to PSS with pick-up
-                                        location</strong></label>
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Notify the
-                                        on-duty PSS via phone at 402-660-1060 </strong></label>
+                                {{ Form::checkbox('notifyPSS', 1, null, ['id' => 'notifyPSS', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('notifyPSS','Notify the on-duty PSS via phone at 402-660-1060 ')}}
+
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>PPE has been
-                                        cleaned per SOP SWD 1-0 </strong></label>
+                                {{ Form::checkbox('truePPE', 1, null, ['id' => 'truePPE', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('truePPE','PPE has been cleaned per SOP SWD 1-0  ')}}
+
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Document in
-                                        Company Day Book and on your Personnel Record </strong></label>
+                                {{ Form::checkbox('trueDocumentDayBook', 1, null, ['id' => 'trueDocumentDayBook', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('trueDocumentDayBook','Document in Company Day Book and on your Personnel Record   ')}}
+
                             </div>
                         </div>
                     </div>
@@ -237,51 +242,52 @@
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Decontaminate
-                                        self- wash, flush as soon as possible</strong></label>
+                                {{ Form::checkbox('potDecontaminate', 1, null, ['id' => 'selfDecontaminate', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('selfDecontaminate','Decontaminate self- wash, flush as soon as possible  ')}}
+
                             </div>
                         </div>
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-12"><input type="checkbox"><strong>Bag & Tag
-                                        clothing if applicable - send email to PSS with pick-up
-                                        location</strong></label>
+                                {{ Form::checkbox('potBagTag', 1, null, ['id' => 'potBagTag', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('potBagTag','Bag & Tag clothing if applicable - send email to PSS with pick-up location')}}
+
                             </div>
                         </div>
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-6"><input type="checkbox"><strong>Complete OFD
-                                        184</strong></label>
-                                <div class="col-sm-2">
-                                    <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
-                                       href="/download/a.txt">
-                                        <i class="fa fa-download" aria-hidden="true"></i> Download</a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <button class="btn btn-info dropdown-toggle col-sm-12" type="button"
-                                            data-toggle="modal"
-                                            data-target="#myModal">
-                                        <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
-                                    </button>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="uploads/OFD6a">Uploads/firefighters3/january/OFD6a.pdf </a>
-                                </div>
+                                {{ Form::checkbox('potOFD184', 1, null, ['id' => 'potOFD184', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('potOFD184','Complete OFD 184')}}
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
+                               href="/download/a.txt">
+                                <i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-info dropdown-toggle col-sm-12" type="button"
+                                    data-toggle="modal"
+                                    data-target="#myModal">
+                                <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
+                            </button>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="uploads/OFD6a">Uploads/firefighters3/january/OFD6a.pdf </a>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                {{ Form::checkbox('potPPE', 1, null, ['id' => 'potPPE', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('potPPE','PPE has been cleaned per SOP SWD 1-0')}}
+
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>PPE has been
-                                        cleaned per SOP SWD 1-0 </strong></label>
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Document in
-                                        Company Day Book and on your Personnel Record </strong>
-                                </label>
+                                {{ Form::checkbox('potDocumentDayBook', 1, null, ['id' => 'potDocumentDayBook', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('potDocumentDayBook','Document in Company Day Book and on your Personnel Record   ')}}
                             </div>
                         </div>
                     </div>
