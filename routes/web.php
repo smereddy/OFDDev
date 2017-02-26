@@ -19,4 +19,6 @@ Route::resource('injuries', 'InjuriesController');
 
 Route::resource('accidents', 'AccidentsController');
 
+Route::resource('hazmat', 'HazmatController');
+
 Route::resource('biologicals', 'BiologicalsController');
