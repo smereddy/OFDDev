@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    {!! Form::open(['method' => 'POST', 'route' => ['injuries.store'], 'files' => true,]) !!}
+    {!! Form::open(['method' => 'POST', 'route' => ['biologicals.store'], 'files' => true,]) !!}
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="jumbotron" style="margin-bottom: 5px; ">
@@ -33,9 +33,9 @@
                 <div class="col-sm-4 form-group">
                     {!! Form::label('exposedEmployeeName', 'Exposed Employee Name', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('exposedEmployeeName', old('station_name'), ['class' => 'form-control'])!!}
+                        {!! Form::text('exposedEmployeeName', old('exposedEmployeeName'), ['class' => 'form-control'])!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('exposedEmployeeName'))
                             <p class="help-block">
                                 {{ $errors->first('exposedEmployeeName') }}
                             </p>
@@ -45,9 +45,9 @@
                 <div class="col-sm-4 form-group">
                     {!! Form::label('dateOfExposure', 'Date of Exposure', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('dateOfExposure', old('station_name'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
+                        {!! Form::text('dateOfExposure', old('dateOfExposure'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('dateOfExposure'))
                             <p class="help-block">
                                 {{ $errors->first('dateOfExposure') }}
                             </p>
@@ -57,9 +57,9 @@
                 <div class="col-sm-4 form-group">
                     {!! Form::label('employeeID_1', 'Employee ID#', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('employeeID_1', old('station_name'), ['class' => 'form-control','placeholder'=>'Enter Badge ID'])!!}
+                        {!! Form::text('employeeID_1', old('employeeID_1'), ['class' => 'form-control','placeholder'=>'Enter Badge ID'])!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('employeeID_1'))
                             <p class="help-block">
                                 {{ $errors->first('employeeID_1') }}
                             </p>
@@ -71,9 +71,9 @@
                 <div class="col-sm-4 form-group">
                     {!! Form::label('assignmentBiological', 'Assignment', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('assignmentBiological', old('station_name'), ['class' => 'form-control'])!!}
+                        {!! Form::text('assignmentBiological', old('assignmentBiological'), ['class' => 'form-control'])!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('assignmentBiological'))
                             <p class="help-block">
                                 {{ $errors->first('assignmentBiological') }}
                             </p>
@@ -90,7 +90,7 @@
                       'C' => 'C',
                       'DIV' => 'DIV'], ['class' => 'form-control'])!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('shift'))
                             <p class="help-block">
                                 {{ $errors->first('shift') }}
                             </p>
@@ -100,9 +100,9 @@
                 <div class="col-sm-4 form-group">
                     {!! Form::label('epcrIncidentNum', 'EPCR Incident#', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('epcrIncidentNum', old('station_name'), ['class' => 'form-control','placeholder'=>'Enter Incident Num'])!!}
+                        {!! Form::text('epcrIncidentNum', old('epcrIncidentNum'), ['class' => 'form-control','placeholder'=>'Enter Incident Num'])!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('epcrIncidentNum'))
                             <p class="help-block">
                                 {{ $errors->first('epcrIncidentNum') }}
                             </p>
@@ -114,7 +114,7 @@
                 <div class="col-sm-4 form-group">
                     {!! Form::label('idcoNumber', 'Primary IDCO #', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('idcoNumber', old('station_name'), ['class' => 'form-control','placeholder'=>'Enter IDCO Badge ID'])!!}
+                        {!! Form::text('idcoNumber', old('idcoNumber'), ['class' => 'form-control','placeholder'=>'Enter IDCO Badge ID'])!!}
                         <p class="help-block"></p>
                         @if($errors->has('idcoNumber'))
                             <p class="help-block">
@@ -126,7 +126,7 @@
                 <div class="col-sm-4 form-group">
                     {!! Form::label('todaysDate', 'Date', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('todaysDate', old('station_name'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
+                        {!! Form::text('todaysDate', old('todaysDate'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
                         <p class="help-block"></p>
                         @if($errors->has('todaysDate'))
                             <p class="help-block">
@@ -136,6 +136,9 @@
                     </div>
                 </div>
             </div>
+
+
+
 
             <h4 style="padding-left:12px;"><u><strong>The following Checklist will follow:</strong></u></h4>
             <div class="row">
