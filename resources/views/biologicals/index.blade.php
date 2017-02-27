@@ -56,7 +56,7 @@
                 <div class="col-sm-4 form-group">
                     {!! Form::label('station_name', 'Employee ID#', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('employeeID_1', old('station_name'), ['class' => 'form-control'])!!}
+                        {!! Form::text('employeeID_1', old('station_name'), ['class' => 'form-control','placeholder'=>'Enter Badge ID'])!!}
                         <p class="help-block"></p>
                         @if($errors->has('station_name'))
                             <p class="help-block">
@@ -99,7 +99,7 @@
                 <div class="col-sm-4 form-group">
                     {!! Form::label('station_name', 'EPCR Incident#', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('epcrIncidentNum', old('station_name'), ['class' => 'form-control'])!!}
+                        {!! Form::text('epcrIncidentNum', old('station_name'), ['class' => 'form-control','placeholder'=>'Enter Incident Num'])!!}
                         <p class="help-block"></p>
                         @if($errors->has('station_name'))
                             <p class="help-block">
@@ -113,7 +113,7 @@
                 <div class="col-sm-4 form-group">
                     {!! Form::label('station_name', 'Primary IDCO #', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('idconumber', old('station_name'), ['class' => 'form-control'])!!}
+                        {!! Form::text('idconumber', old('station_name'), ['class' => 'form-control','placeholder'=>'Enter IDCO Badge ID'])!!}
                         <p class="help-block"></p>
                         @if($errors->has('station_name'))
                             <p class="help-block">
