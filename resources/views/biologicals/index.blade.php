@@ -44,7 +44,7 @@
                 <div class="col-sm-4 form-group">
                     {!! Form::label('station_name', 'Date of Exposure', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('dateofExposure', old('station_name'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
+                        {!! Form::text('dateOfExposure', old('station_name'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
                         <p class="help-block"></p>
                         @if($errors->has('station_name'))
                             <p class="help-block">
