@@ -25,7 +25,8 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        {{--<li class="dropdown">--}}
+        <li data-toggle="tooltip" class="tip nav-icon" data-placement="bottom" title="OFD 6C"><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
+        <li class="dropdown">
           {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome, {{ Auth::user()->name }}! <span class="caret"></span></a>--}}
           {{--<ul class="dropdown-menu">--}}
             {{--<li><a href="{{ route('users.index') }}">Manage</a></li>--}}
