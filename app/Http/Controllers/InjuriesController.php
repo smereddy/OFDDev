@@ -41,6 +41,8 @@ class InjuriesController extends Controller
         Injury::create($request->all());
 
         return redirect()->route('injuries.index');
+
+        
     }
 //
 //    public function show($id)
