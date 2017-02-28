@@ -301,7 +301,7 @@
                         <label class="col-sm-5"></label>
                         <div class="btn-bottom">
                             <div class="btn btn-primary">Save & Exit &raquo;</div>
-                            <div class="btn btn-primary">Submit &raquo;</div>
+                            {{ Form::submit('Submit', array('class' => 'btn')) }}
                         </div>
                     </div>
                 </div>
