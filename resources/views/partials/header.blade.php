@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        OFD-AMS
+        OFD-Wellness
     </title>
 
     <link rel="icon" type="image/png" href="{{ url('img') }}/favicons/favicon-32x32.png" sizes="32x32">

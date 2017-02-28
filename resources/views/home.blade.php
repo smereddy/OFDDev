@@ -8,10 +8,10 @@
 
 @section('content')
 
-    <!-- Top navigation icons starting here-->
+    <!-- top navigation icons starting here-->
     <div class="col-md-12">
         <div class="row" style="margin: inherit">
-        {{--<a href="{{ route('all_assets.index') }}">--}}
+        <a href="{{ route('injuries.index') }}">
             <div class="col-md-3 large-category">
               <div class="thumbnail">
                 <div class="thumbnail-dash">
@@ -26,9 +26,9 @@
             </div>
         </a>
 
-        {{--<a href="{{ route('stations.index') }}">--}}
+        <a href="{{ route('accidents.index') }}">
             <div class="col-md-3 large-category">
-              <div class="thumbnail stations">
+              <div class="thumbnail">
                 <div class="thumbnail-dash">
                   <i class="fa fa-ambulance fa-4x" aria-hidden="true"></i>
                 </div>
@@ -72,7 +72,55 @@
 
     </div>
     </div>
-    <!-- Top navigation icons ends here-->
+    <!-- top navigation icons ends here-->
+
+
+    <!-- bottom navigation icons start here-->
+    <div class="col-md-12">
+        <div class="row" style="margin: inherit">
+            {{--<a href="{{ route('repairs.index') }}">--}}
+            <div class="col-md-4 large-category">
+                <div class="thumbnail">
+                    <div class="thumbnail-dash">
+                        <i class="fa fa-upload fa-4x" aria-hidden="true"></i>
+                    </div>
+                    <div class="caption">
+                        <h3>CorVel Uploads</h3>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            {{--<a href="{{ route('repairs.index') }}">--}}
+            <div class="col-md-4 large-category">
+                <div class="thumbnail">
+                    <div class="thumbnail-dash">
+                        <i class="fa fa-upload fa-4x" aria-hidden="true"></i>
+                    </div>
+                    <div class="caption">
+                        <h3>FMLA Uploads</h3>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            {{--<a href="{{ route('repairs.index') }}">--}}
+            <div class="col-md-4 large-category">
+                <div class="thumbnail">
+                    <div class="thumbnail-dash">
+                        <i class="fa fa-upload fa-4x" aria-hidden="true"></i>
+                    </div>
+                    <div class="caption">
+                        <h3>Limited Duty</h3>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+
+        </div>
+    </div>
+    <!-- Bottom navigation icons ends here-->
 
 @endsection
 
