@@ -12,7 +12,7 @@
                 <div class="col-md-10">
                     <div class="col-md-12">
                         <div class="page-header1">
-                            <h3><strong>Exposure Tracking Document OFD006B</strong></h3>
+                            <h3><strong>Biological Exposure Tracking Document OFD006B</strong></h3>
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -22,7 +22,7 @@
                         <h6><i><strong>Effective Date: 8/17/16</strong></i></h6>
                     </div>
                     <div class="col-md-12">
-                        <h6><i><strong>Amends, Replaces, Rescinds: Replaces OFD-6A (Rev. 05-15)</strong></i></h6>
+                        <h6><i><strong>Amends, Replaces, Rescinds: Replaces OFD-6B (Rev. 05-15)</strong></i></h6>
                     </div>
                 </div>
             </div>
@@ -295,13 +295,15 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <label class="col-sm-5"></label>
-                        <div class="btn-bottom">
-                            <div class="btn btn-primary">Save & Exit &raquo;</div>
-                            <div class="btn btn-primary">Submit &raquo;</div>
+                        <div class="form-group">
+                            {!! Form::submit('Submit',['class' => 'btn btn-success']) !!}
+                            <a href="http://localhost/capofd/public/", class="btn btn-danger">Cancel</a>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 @stop
