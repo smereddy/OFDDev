@@ -31,5 +31,18 @@
     <link rel="stylesheet" href="{{ url('css') }}/dashboard.css"/>
 
 </head>
+<style>
+    .fileUpload {
+        position: relative;
+        overflow: hidden;
 
+    }
+    .fileUpload .upload {
+        position: absolute;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+</style>
 <body class="page-header-fixed">

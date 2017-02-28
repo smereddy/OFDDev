@@ -21,7 +21,7 @@ class Injury extends Model
         'docOpDayBook_isChecked',
         'callFireSupervisor_isChecked',
         'policeOfficer_isChecked',
-        'attachWorkAbilityReport',
+        'station_document',
         'attachInvestigationReport',
         'attachStmtWitness',
         'attachEmpPhyscian',
