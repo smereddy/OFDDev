@@ -95,7 +95,7 @@
             </form>
         <div class="row">
             <div class="col-sm-12 form-group">
-                <label class="col-sm-4">In case attend Omaha Police Academy - Training Assigned</label>
+                <label class="col-sm-4">In case of symptoms</label>
                 <div class="col-sm-2">
                     {{ Form::select('shift', [
                     'yes' => 'YES',
@@ -106,8 +106,8 @@
         </div>
         <div class="row">
             <div class="col-sm-12 form-group" align="center">
-                <label><u>If you should have any other questions, please feel free to contact the PSS for assistance at 402-660-1060.
-                    </u></label>
+                <label>If you should have any other questions, please feel free to contact the PSS for assistance at 402-660-1060.
+                    </label>
             </div>
         </div>
 
