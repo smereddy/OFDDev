@@ -10,6 +10,11 @@ class hazmat extends Model
 
         'createdby',
         'updatedby',
+        'ofd6cID',
+        'contactCorVel',
+        'corVelID',
+        'attachOFD6d',
+        'pathOFD6d'
 
 
     ];
