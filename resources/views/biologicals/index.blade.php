@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
     {!! Form::open(['method' => 'POST', 'route' => ['biologicals.store'], 'files' => true,]) !!}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="jumbotron" style="margin-bottom: 5px; ">
@@ -137,9 +139,6 @@
                 </div>
             </div>
 
-
-
-
             <h4 style="padding-left:12px;"><u><strong>The following Checklist will follow:</strong></u></h4>
             <div class="row">
                 <div class="col-sm-12">
@@ -155,12 +154,16 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="container">
-                    <h4> In Case of True Exposure Please Click Below</h4>
-                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#id">True Exposure
-                    </button>
-                    <div id="id" class="collapse">
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Please Click Here In Case of True Exposure</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
                         <div class="col-sm-12">
                             <div class="form-group">
                                 {{ Form::checkbox('confirmSource', 1, null, ['id'=>'confirmSource', 'class' => 'className' , 'required' => 'required']) }}
@@ -170,25 +173,25 @@
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                            {{ Form::checkbox('trueOFD184', 1, null, ['id' => 'trueOFD184', 'class'=>'className', 'required'=>'required']) }}
-                            {{Form::label('trueOFD184','Complete OFD 184')}}
-                             </div>
+                                {{ Form::checkbox('trueOFD184', 1, null, ['id' => 'trueOFD184', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('trueOFD184','Complete OFD 184')}}
+                            </div>
                         </div>
-                                <div class="col-sm-2">
-                                    <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
-                                       href="/download/a.txt">
-                                        <i class="fa fa-download" aria-hidden="true"></i> Download</a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <button class="btn btn-info dropdown-toggle col-sm-12" type="button"
-                                            data-toggle="modal"
-                                            data-target="#myModal">
-                                        <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
-                                    </button>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="uploads/OFD6a">Uploads/firefighters3/january/OFD6a.pdf </a>
-                                </div>
+                        <div class="col-sm-2">
+                            <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
+                               href="/download/a.txt">
+                                <i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-info dropdown-toggle col-sm-12" type="button"
+                                    data-toggle="modal"
+                                    data-target="#myModal">
+                                <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
+                            </button>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="uploads/OFD6a">Uploads/firefighters3/january/OFD6a.pdf </a>
+                        </div>
 
                         <div class="col-sm-12">
                             <div class="form-group">
@@ -236,13 +239,15 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="container">
-                    <h4>In Case of Potential Exposure Please Click Below</h4>
-                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#id1">Potential
-                        Exposure
-                    </button>
-                    <div id="id1" class="collapse">
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Please Click Here In Case Of Potential Exposure</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
 
                         <div class="col-sm-12">
                             <div class="form-group">
@@ -296,6 +301,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+        </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <label class="col-sm-5"></label>
