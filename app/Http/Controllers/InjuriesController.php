@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Injury;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreStationsRequest;
 use App\Http\Controllers\Traits\FileUploadTrait;
@@ -37,7 +38,7 @@ class InjuriesController extends Controller
     public function store(StoreStationsRequest $request)
     {
         $request = $this->saveFiles($request);
-
+        Injury::create($request->all());
 
         return redirect()->route('injuries.index');
     }
