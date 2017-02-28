@@ -110,6 +110,15 @@
                     </label>
             </div>
         </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="col-sm-5"></label>
+            <div class="btn-bottom">
+                <div class="btn btn-primary">Save & Exit &raquo;</div>
+                <div class="btn btn-primary">Submit &raquo;</div>
+            </div>
+        </div>
+    </div>
 
     <!--pop-up-grid-->
     <div id="myModal" class="modal fade" role="dialog">
