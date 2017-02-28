@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        OFD-AMS
+        OFD-Wellness
     </title>
 
     <link rel="icon" type="image/png" href="{{ url('img') }}/favicons/favicon-32x32.png" sizes="32x32">
@@ -31,5 +31,18 @@
     <link rel="stylesheet" href="{{ url('css') }}/dashboard.css"/>
 
 </head>
+<style>
+    .fileUpload {
+        position: relative;
+        overflow: hidden;
 
+    }
+    .fileUpload .upload {
+        position: absolute;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+</style>
 <body class="page-header-fixed">
