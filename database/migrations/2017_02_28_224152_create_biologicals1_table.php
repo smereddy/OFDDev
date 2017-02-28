@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOfd6bTable extends Migration
+class CreateBiologicals1Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateOfd6bTable extends Migration
      */
     public function up()
     {
-        Schema::create('ofd6b', function (Blueprint $table) {
+        Schema::create('biologicals', function (Blueprint $table) {
             $table->string('exposedEmployeeName');
             $table->date('dateOfExposure');
             $table->integer('employeeID_1');
@@ -27,6 +27,7 @@ class CreateOfd6bTable extends Migration
             $table->boolean('confirmSource');
             $table->boolean('trueOFD184');
             $table->boolean('bloodReport');
+            $table->boolean('exposureTab');
             $table->boolean('trueBagTag');
             $table->boolean('notifyPSS');
             $table->boolean('truePPE');
@@ -48,6 +49,6 @@ class CreateOfd6bTable extends Migration
      */
     public function down()
     {
-        Schema::drop('ofd6b');
+        Schema::drop('biologicals');
     }
 }
