@@ -10,4 +10,8 @@ class BiologicalsController extends Controller
     {
         return view('biologicals.index', compact('biologicals'));
     }
+    public function store()
+    {
+        return view('biologicals.index', compact('biologicals'));
+    }
 }
