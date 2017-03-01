@@ -24,7 +24,6 @@
                 <div class="row">
                     <div class="col-md-2">
                         <img src="{{asset('img/login.png')}}">
-
                     </div>
                     <div class="col-md-10">
                         <div class="col-md-12">
@@ -212,7 +211,6 @@
                   <div class="col-sm-12 form-group">
                       <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Complete LRS 101 City of Omaha Accident Report</strong>-Include RB#, Officer Name, Badge#</label>
                       <div class="col-sm-2">
-
                           <a class="btn btn-success dropdown-toggle col-sm-12" type="button" href="/download/a.txt">
                               <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                       </div>
@@ -231,7 +229,6 @@
                   <div class="col-sm-12 form-group">
                       <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong><strong>Complete OFD 295 Vehicle Accident Witness Statement</strong>-This Report is for civilian statements only</label>
                       <div class="col-sm-2">
-
                           <a class="btn btn-success dropdown-toggle col-sm-12" type="button" href="/download/a.txt">
                               <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                       </div>
@@ -250,7 +247,6 @@
                   <div class="col-sm-12 form-group">
                       <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Complete OFD 25a Accident Intradepartmental Communication</strong>-Driver</label>
                       <div class="col-sm-2">
-
                           <a class="btn btn-success dropdown-toggle col-sm-12" type="button" href="/download/a.txt">
                               <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                       </div>
@@ -269,7 +265,6 @@
                   <div class="col-sm-12 form-group">
                       <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Complete OFD 25b Accident Intradepartmental Communication</strong>-Supervisor</label>
                       <div class="col-sm-2">
-
                           <a class="btn btn-success dropdown-toggle col-sm-12" type="button" href="/download/a.txt">
                               <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                       </div>
@@ -288,7 +283,6 @@
                   <div class="col-sm-12 form-group">
                       <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Complete OFD 25c Accident Intradepartmental Communication</strong>-Other Personnel</label>
                       <div class="col-sm-2">
-
                           <a class="btn btn-success dropdown-toggle col-sm-12" type="button" href="/download/a.txt">
                               <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                       </div>
@@ -307,7 +301,6 @@
                   <div class="col-sm-12 form-group">
                       <label class="checkbox-inline col-sm-4 num"><input type="checkbox"><strong> Complete OFD 31-OFD Damaged, Lost, Stolen Equipment Report</strong></label>
                       <div class="col-sm-2">
-
                           <a class="btn btn-success dropdown-toggle col-sm-12" type="button" href="/download/a.txt">
                               <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                       </div>
@@ -327,7 +320,6 @@
                   <div class="col-sm-12 form-group">
                       <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong> Complete OFD 127 Request for Services Form</strong></label>
                       <div class="col-sm-2">
-
                           <a class="btn btn-success dropdown-toggle col-sm-12" type="button" href="/download/a.txt">
                               <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                       </div>
@@ -346,7 +338,6 @@
                   <div class="col-sm-12 form-group">
                       <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong><strong> Complete DR 41 State of Nebraska DMV Vehicle Accident Report</strong></label>
                       <div class="col-sm-2">
-
                           <a class="btn btn-success dropdown-toggle col-sm-12" type="button" href="/download/a.txt">
                               <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                       </div>
@@ -384,7 +375,6 @@
           </form>
     </div>
 	</div>
-
     </div>
     <!--pop-up-grid-->
     <div id="myModal" class="modal fade" role="dialog">
@@ -420,6 +410,5 @@
     </div>
     <!--pop-up-grid-->
     
-
     {!! Form::close() !!}
 @stop

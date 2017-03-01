@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
     {!! Form::open(['method' => 'POST', 'route' => ['injuries.store'], 'files' => true,]) !!}
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -39,13 +40,13 @@
             </div>
             <div class="row">
                <div class="col-sm-4 form-group">
-                    {!! Form::label('station_name', 'Todays Date:', ['class' => 'col-sm-4 control-label']) !!}
+                    {!! Form::label('createDate', 'Todays Date:', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('createdate', old('station_name'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
+                        {!! Form::text('createDate', old('createDate'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
                     <p class="help-block"></p>
-                    @if($errors->has('station_name'))
+                    @if($errors->has('createDate'))
                         <p class="help-block">
-                            {{ $errors->first('station_name') }}
+                            {{ $errors->first('createDate') }}
                         </p>
                     @endif
                         </div>
@@ -193,18 +194,22 @@
                               Report</strong>
                           - Only if seeking medical attention. Complete "Employee Section" and sign at bottom.</label>
                       <div class="col-sm-2">
-
-                          <a class="btn btn-success dropdown-toggle col-sm-12" type="button" href="/download/a.txt">
+                              <a class="btn btn-success dropdown-toggle col-sm-12" type="button" href="/download/a.txt">
                               <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                       </div>
                       <div class="col-sm-2">
+                          <div class="fileUpload upload btn btn-success">
+                          {!! Form::file('station_document', old('station_document'), ['id' => 'upload' ,'class' => 'form-control']) !!}
+                          {!! Form::hidden('station_document_max_size', 20) !!}
+                          @if($errors->has('station_document'))
+                              <p class="help-block">
+                                  {{ $errors->first('station_document') }}
+                              </p>
+                          @endif
+                          </div>
                           <button type="button" class="btn btn-info dropdown-toggle col-sm-12" data-toggle="modal"
                                   data-target="#myModal">
                               <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload</button>
-                      </div>
-                      <div class="col-sm-2">
-                          <button class="btn btn-primary dropdown-toggle col-sm-12" type="button" data-toggle="dropdown">
-                              <i class="fa fa-search" aria-hidden="true"></i> Retrieve</button>
                       </div>
                   </div>
               </div>
@@ -359,52 +364,41 @@
                           and notify CorVel by phone</label>
                   </div>
               </div>
-              <div class="row">
-                  <div class="col-sm-12">
-                      <label class="col-sm-6"></label>
-                      <div class="btn-bottom">
-                          <div class="btn btn-primary">Save & Exit &raquo;</div>
-                          <div class="btn btn-primary">Submit &raquo;</div>
-                      </div>
-                  </div>
-              </div>
+                  {!! Form::submit('Submit',['class' => 'btn btn-success']) !!}
+              <a href="{{ route('injuries.index') }}" class="btn btn-default">Cancel</a>
           </form>
     </div>
-
     </div>
     <!--pop-up-grid-->
-    <div id="myModal" class="modal fade" role="dialog">
-        {!! Form::open(['method' => 'POST', 'route' => ['injuries.store'], 'files' => true,]) !!}
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Corvel Work Ability Report - Upload Form</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-xs-12 form-group">
-                            {!! Form::file('station_document', old('station_document'), ['class' => 'form-control']) !!}
-                            {!! Form::hidden('station_document_max_size', 20) !!}
-                            <p class="help-block">up to 20mb</p>
-                            @if($errors->has('station_document'))
-                                <p class="help-block">
-                                    {{ $errors->first('station_document') }}
-                                </p>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    {!! Form::submit('Upload',['class' => 'btn btn-success']) !!}
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-            {!! Form::close() !!}
-        </div>
-    </div>
+    {{--<div id="myModal" class="modal fade" role="dialog">--}}
+         {{--<div class="modal-dialog">--}}
+            {{--<!-- Modal content-->--}}
+            {{--<div class="modal-content">--}}
+                {{--<div class="modal-header">--}}
+                    {{--<button type="button" class="close" data-dismiss="modal">&times;</button>--}}
+                    {{--<h4 class="modal-title">Corvel Work Ability Report - Upload Form</h4>--}}
+                {{--</div>--}}
+                {{--<div class="modal-body">--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-xs-12 form-group">--}}
+                            {{--{!! Form::file('station_document', old('station_document'), ['class' => 'form-control']) !!}--}}
+                            {{--{!! Form::hidden('station_document_max_size', 20) !!}--}}
+                            {{--<p class="help-block">up to 20mb</p>--}}
+                            {{--@if($errors->has('station_document'))--}}
+                                {{--<p class="help-block">--}}
+                                    {{--{{ $errors->first('station_document') }}--}}
+                                {{--</p>--}}
+                            {{--@endif--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="modal-footer">--}}
+                    {{--{!! Form::submit('upload',['class' => 'btn btn-success']) !!}--}}
+                    {{--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <!--pop-up-grid-->
-
     {!! Form::close() !!}
 @stop

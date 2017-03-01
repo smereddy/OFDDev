@@ -1,9 +1,11 @@
 <?php
+
 namespace App\Http\Requests;
 
+use App\Accident;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreStationsRequest extends FormRequest
+class StoreAccidentsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -12,7 +14,7 @@ class StoreStationsRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -23,8 +25,7 @@ class StoreStationsRequest extends FormRequest
     public function rules()
     {
         return [
-            'station_document' => 'max:20480',
-            'createDate' => 'string:injuries,createDate,'.$this->route('injury'),
-        ];
+            'driverID' => 'required|max:255',
+            ];
     }
 }
