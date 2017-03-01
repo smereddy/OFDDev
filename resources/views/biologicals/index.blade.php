@@ -1,66 +1,69 @@
 @extends('layouts.app')
 @section('content')
     {!! Form::open(['method' => 'POST', 'route' => ['biologicals.store'], 'files' => true,]) !!}
-    <div class="container-fluid">
-
-        <div class="jumbotron" style="margin-bottom: 5px; ">
-
-            <div class="row">
-                <div class="col-md-2">
-                    <img src="{{asset('img/login.png')}}">
-                </div>
-                <div class="col-md-10">
-                    <div class="col-md-12">
-                        <div class="page-header1">
-                            <h3><strong>Exposure Tracking Document OFD006B</strong></h3>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="jumbotron" style="margin-bottom: 5px; ">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="{{asset('img/login.png')}}">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="col-md-12">
+                            <div class="page-header1">
+                                <h3><strong>Biological Exposure Tracking Document (OFD-006B)</strong></h3>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <h6><i><strong>Issue Date: 8/17/16</strong></i></h6>
+                        </div>
+                        <div class="col-md-2">
+                            <h6><i><strong>Effective Date: 8/17/16</strong></i></h6>
+                        </div>
+                        <div class="col-md-12">
+                            <h6><i><strong>Amends, Replaces, Rescinds: Replaces OFD-006B (Rev. 05-15)</strong></i></h6>
                         </div>
                     </div>
-                    <div class="col-md-2">
-                        <h6><i><strong>Issue Date: 8/17/16</strong></i></h6>
-                    </div>
-                    <div class="col-md-2">
-                        <h6><i><strong>Effective Date: 8/17/16</strong></i></h6>
-                    </div>
-                    <div class="col-md-12">
-                        <h6><i><strong>Amends, Replaces, Rescinds: Replaces OFD-6A (Rev. 05-15)</strong></i></h6>
-                    </div>
                 </div>
             </div>
+        </div>
             <br>
             <br>
             <div class="row">
                 <div class="col-sm-4 form-group">
-                    {!! Form::label('station_name', 'Exposed Employee Name', ['class' => 'col-sm-4 control-label']) !!}
+                    {!! Form::label('exposedEmployeeName', 'Exposed Employee Name', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('exposedEmployeeName', old('station_name'), ['class' => 'form-control'])!!}
+                        {!! Form::text('exposedEmployeeName', old('exposedEmployeeName'), ['class' => 'form-control'])!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('exposedEmployeeName'))
                             <p class="help-block">
-                                {{ $errors->first('station_name') }}
+                                {{ $errors->first('exposedEmployeeName') }}
                             </p>
                         @endif
                     </div>
                 </div>
                 <div class="col-sm-4 form-group">
-                    {!! Form::label('station_name', 'Date of Exposure', ['class' => 'col-sm-4 control-label']) !!}
+                    {!! Form::label('dateOfExposure', 'Date of Exposure', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('dateofExposure', old('station_name'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
+                        {!! Form::text('dateOfExposure', old('dateOfExposure'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('dateOfExposure'))
                             <p class="help-block">
-                                {{ $errors->first('station_name') }}
+                                {{ $errors->first('dateOfExposure') }}
                             </p>
                         @endif
                     </div>
                 </div>
                 <div class="col-sm-4 form-group">
-                    {!! Form::label('station_name', 'Employee ID#', ['class' => 'col-sm-4 control-label']) !!}
+                    {!! Form::label('employeeID_1', 'Employee ID#', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('employeeID_1', old('station_name'), ['class' => 'form-control'])!!}
+                        {!! Form::text('employeeID_1', old('employeeID_1'), ['class' => 'form-control','placeholder'=>'Enter Badge ID'])!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('employeeID_1'))
                             <p class="help-block">
-                                {{ $errors->first('station_name') }}
+                                {{ $errors->first('employeeID_1') }}
                             </p>
                         @endif
                     </div>
@@ -68,20 +71,20 @@
             </div>
             <div class="row">
                 <div class="col-sm-4 form-group">
-                    {!! Form::label('station_name', 'Assignment', ['class' => 'col-sm-4 control-label']) !!}
+                    {!! Form::label('assignmentBiological', 'Assignment', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('assignmentBiological', old('station_name'), ['class' => 'form-control'])!!}
+                        {!! Form::text('assignmentBiological', old('assignmentBiological'), ['class' => 'form-control'])!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('assignmentBiological'))
                             <p class="help-block">
-                                {{ $errors->first('station_name') }}
+                                {{ $errors->first('assignmentBiological') }}
                             </p>
                         @endif
                     </div>
                 </div>
 
                 <div class="col-sm-4 form-group">
-                    {!! Form::label('station_name', 'Shift', ['class' => 'col-sm-4 control-label']) !!}
+                    {!! Form::label('shift', 'Shift', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6">
                         {!! Form::select('shift',[
                       'A' => 'A',
@@ -89,21 +92,21 @@
                       'C' => 'C',
                       'DIV' => 'DIV'], ['class' => 'form-control'])!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('shift'))
                             <p class="help-block">
-                                {{ $errors->first('station_name') }}
+                                {{ $errors->first('shift') }}
                             </p>
                         @endif
                     </div>
                 </div>
                 <div class="col-sm-4 form-group">
-                    {!! Form::label('station_name', 'EPCR Incident#', ['class' => 'col-sm-4 control-label']) !!}
+                    {!! Form::label('epcrIncidentNum', 'EPCR Incident#', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('epcrIncidentNum', old('station_name'), ['class' => 'form-control'])!!}
+                        {!! Form::text('epcrIncidentNum', old('epcrIncidentNum'), ['class' => 'form-control','placeholder'=>'Enter Incident Num'])!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('epcrIncidentNum'))
                             <p class="help-block">
-                                {{ $errors->first('station_name') }}
+                                {{ $errors->first('epcrIncidentNum') }}
                             </p>
                         @endif
                     </div>
@@ -111,25 +114,25 @@
             </div>
             <div class="row">
                 <div class="col-sm-4 form-group">
-                    {!! Form::label('station_name', 'Primary IDCO', ['class' => 'col-sm-4 control-label']) !!}
+                    {!! Form::label('idcoNumber', 'Primary IDCO #', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('idconumber', old('station_name'), ['class' => 'form-control'])!!}
+                        {!! Form::text('idcoNumber', old('idcoNumber'), ['class' => 'form-control','placeholder'=>'Enter IDCO Badge ID'])!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('idcoNumber'))
                             <p class="help-block">
-                                {{ $errors->first('station_name') }}
+                                {{ $errors->first('idcoNumber') }}
                             </p>
                         @endif
                     </div>
                 </div>
                 <div class="col-sm-4 form-group">
-                    {!! Form::label('station_name', 'Date of Exposure', ['class' => 'col-sm-4 control-label']) !!}
+                    {!! Form::label('todaysDate', 'Date', ['class' => 'col-sm-4 control-label']) !!}
                     <div class="col-sm-6 ">
-                        {!! Form::text('dateofExposure', old('station_name'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
+                        {!! Form::text('todaysDate', old('todaysDate'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
                         <p class="help-block"></p>
-                        @if($errors->has('station_name'))
+                        @if($errors->has('todaysDate'))
                             <p class="help-block">
-                                {{ $errors->first('station_name') }}
+                                {{ $errors->first('todaysDate') }}
                             </p>
                         @endif
                     </div>
@@ -139,24 +142,28 @@
             <h4 style="padding-left:12px;"><u><strong>The following Checklist will follow:</strong></u></h4>
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="form-group">
+                    <div class="form-group" , style="padding-left:12px;">
                         {{ Form::checkbox('decontaminate', 1, null, ['id'=>'decontaminate', 'class' => 'className' , 'required' => 'required']) }}
                         {{ Form::label('decontaminate', 'Decontaminate') }}
                     </div>
                 </div>
                 <div class="col-sm-12">
-                    <div class="form-group">
+                    <div class="form-group" , style="padding-left:12px;">
                         {{ Form::checkbox('callChi', 1, null, ['id'=>'callChi', 'class' => 'className' , 'required' => 'required']) }}
                         {{ Form::label('callChi', 'Call CHI OUCH Nurse to determine type of exposure') }}
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="container">
-                    <h4> In Case of True Exposure Please Click Below</h4>
-                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#id">True Exposure
-                    </button>
-                    <div id="id" class="collapse">
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Please Click Here In Case of True Exposure</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
                         <div class="col-sm-12">
                             <div class="form-group">
                                 {{ Form::checkbox('confirmSource', 1, null, ['id'=>'confirmSource', 'class' => 'className' , 'required' => 'required']) }}
@@ -166,132 +173,143 @@
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-6"><input type="checkbox"><strong>Complete OFD
-                                        184</strong></label>
-                                <div class="col-sm-2">
-                                    <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
-                                       href="/download/a.txt">
-                                        <i class="fa fa-download" aria-hidden="true"></i> Download</a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <button class="btn btn-info dropdown-toggle col-sm-12" type="button"
-                                            data-toggle="modal"
-                                            data-target="#myModal">
-                                        <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
-                                    </button>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="uploads/OFD6a">Uploads/firefighters3/january/OFD6a.pdf </a>
-                                </div>
+                                {{ Form::checkbox('trueOFD184', 1, null, ['id' => 'trueOFD184', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('trueOFD184','Complete OFD 184')}}
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
+                               href="/download/a.txt">
+                                <i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-info dropdown-toggle col-sm-12" type="button"
+                                    data-toggle="modal"
+                                    data-target="#myModal">
+                                <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
+                            </button>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="uploads/OFD6a">Uploads/firefighters3/january/OFD6a.pdf </a>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                {{ Form::checkbox('bloodReport', 1, null, ['id' => 'bloodReport', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('bloodReport','Report for blood draw as directed by OUCH Nurse')}}
+
                             </div>
                         </div>
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Report for blood
-                                        draw as directed by OUCH Nurse</strong></label>
+                                {{ Form::checkbox('exposureTab', 1, null, ['id' => 'exposureTab', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('exposureTab','Complete Exposure tab in ePCR ')}}
+
                             </div>
                         </div>
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Complete Exposure
-                                        tab in ePCR </strong></label>
-                            </div>
-                        </div>
+                                {{ Form::checkbox('trueBagTag', 1, null, ['id' => 'trueBagTag', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('trueBagTag','Bag & Tag clothing if applicable - send email to PSS with pick-up location ')}}
 
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Bag & Tag
-                                        clothing if applicable - send email to PSS with pick-up
-                                        location</strong></label>
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Notify the
-                                        on-duty PSS via phone at 402-660-1060 </strong></label>
+                                {{ Form::checkbox('notifyPSS', 1, null, ['id' => 'notifyPSS', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('notifyPSS','Notify the on-duty PSS via phone at 402-660-1060 ')}}
+
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>PPE has been
-                                        cleaned per SOP SWD 1-0 </strong></label>
+                                {{ Form::checkbox('truePPE', 1, null, ['id' => 'truePPE', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('truePPE','PPE has been cleaned per SOP SWD 1-0  ')}}
+
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Document in
-                                        Company Day Book and on your Personnel Record </strong></label>
+                                {{ Form::checkbox('trueDocumentDayBook', 1, null, ['id' => 'trueDocumentDayBook', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('trueDocumentDayBook','Document in Company Day Book and on your Personnel Record   ')}}
+
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="container">
-                    <h4>In Case of Potential Exposure Please Click Below</h4>
-                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#id1">Potential
-                        Exposure
-                    </button>
-                    <div id="id1" class="collapse">
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Please Click Here In Case Of Potential Exposure</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Decontaminate
-                                        self- wash, flush as soon as possible</strong></label>
+                                {{ Form::checkbox('potDecontaminate', 1, null, ['id' => 'selfDecontaminate', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('selfDecontaminate','Decontaminate self- wash, flush as soon as possible  ')}}
+
                             </div>
                         </div>
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-12"><input type="checkbox"><strong>Bag & Tag
-                                        clothing if applicable - send email to PSS with pick-up
-                                        location</strong></label>
+                                {{ Form::checkbox('potBagTag', 1, null, ['id' => 'potBagTag', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('potBagTag','Bag & Tag clothing if applicable - send email to PSS with pick-up location')}}
+
                             </div>
                         </div>
 
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-6"><input type="checkbox"><strong>Complete OFD
-                                        184</strong></label>
-                                <div class="col-sm-2">
-                                    <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
-                                       href="/download/a.txt">
-                                        <i class="fa fa-download" aria-hidden="true"></i> Download</a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <button class="btn btn-info dropdown-toggle col-sm-12" type="button"
-                                            data-toggle="modal"
-                                            data-target="#myModal">
-                                        <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
-                                    </button>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="uploads/OFD6a">Uploads/firefighters3/january/OFD6a.pdf </a>
-                                </div>
+                                {{ Form::checkbox('potOFD184', 1, null, ['id' => 'potOFD184', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('potOFD184','Complete OFD 184')}}
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
+                               href="/download/a.txt">
+                                <i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-info dropdown-toggle col-sm-12" type="button"
+                                    data-toggle="modal"
+                                    data-target="#myModal">
+                                <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
+                            </button>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="uploads/OFD6a">Uploads/firefighters3/january/OFD6a.pdf </a>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                {{ Form::checkbox('potPPE', 1, null, ['id' => 'potPPE', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('potPPE','PPE has been cleaned per SOP SWD 1-0')}}
+
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>PPE has been
-                                        cleaned per SOP SWD 1-0 </strong></label>
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label class="checkbox-inline col-sm-4"><input type="checkbox"><strong>Document in
-                                        Company Day Book and on your Personnel Record </strong>
-                                </label>
+                                {{ Form::checkbox('potDocumentDayBook', 1, null, ['id' => 'potDocumentDayBook', 'class'=>'className', 'required'=>'required']) }}
+                                {{Form::label('potDocumentDayBook','Document in Company Day Book and on your Personnel Record   ')}}
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+        </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <label class="col-sm-5"></label>
                         <div class="btn-bottom">
                             <div class="btn btn-primary">Save & Exit &raquo;</div>
-                            <div class="btn btn-primary">Submit &raquo;</div>
+                            {{ Form::submit('Submit', array('class' => 'btn')) }}
                         </div>
                     </div>
                 </div>
