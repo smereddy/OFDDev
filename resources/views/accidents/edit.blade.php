@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-    {!! Form::open(['method' => 'POST', 'route' => ['accidents.store'], 'files' => true,]) !!}
+    {!! Form::model($accident,['method' => 'PUT', 'route' => ['accidents.update', $station->ofd6aID], 'files' => true,]) !!}
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <script>
