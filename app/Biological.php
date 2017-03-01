@@ -7,14 +7,30 @@ use Illuminate\Database\Eloquent\Model;
 class Biological extends Model
 {
     //
-    protected $fillable=[
+    protected $fillable = [
         'exposedEmployeeName',
         'dateOfExposure',
         'employeeID_1',
         'assignmentBiological',
         'shift',
-        'idconumber',
+        'idcoNumber',
         'epcrIncidentNum',
-        'todaysDate'
+        'todaysDate',
+        'decontaminate',
+        'callChi',
+        'confirmSource',
+        'trueOFD184',
+        'bloodReport',
+        'exposureTab',
+        'trueBagTag',
+        'notifyPSS',
+        'truePPE',
+        'trueDocumentDayBook',
+        'potDecontaminate',
+        'potBagTag',
+        'potOFD184',
+        'potPPE',
+        'potDocumentDayBook'
+
     ];
 }
