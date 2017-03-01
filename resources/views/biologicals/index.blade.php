@@ -29,137 +29,138 @@
                 </div>
             </div>
         </div>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-sm-4 form-group">
-                    {!! Form::label('exposedEmployeeName', 'Exposed Employee Name', ['class' => 'col-sm-4 control-label']) !!}
-                    <div class="col-sm-6 ">
-                        {!! Form::text('exposedEmployeeName', old('exposedEmployeeName'), ['class' => 'form-control'])!!}
-                        <p class="help-block"></p>
-                        @if($errors->has('exposedEmployeeName'))
-                            <p class="help-block">
-                                {{ $errors->first('exposedEmployeeName') }}
-                            </p>
-                        @endif
-                    </div>
-                </div>
-                <div class="col-sm-4 form-group">
-                    {!! Form::label('dateOfExposure', 'Date of Exposure', ['class' => 'col-sm-4 control-label']) !!}
-                    <div class="col-sm-6 ">
-                        {!! Form::text('dateOfExposure', old('dateOfExposure'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
-                        <p class="help-block"></p>
-                        @if($errors->has('dateOfExposure'))
-                            <p class="help-block">
-                                {{ $errors->first('dateOfExposure') }}
-                            </p>
-                        @endif
-                    </div>
-                </div>
-                <div class="col-sm-4 form-group">
-                    {!! Form::label('employeeID_1', 'Employee ID#', ['class' => 'col-sm-4 control-label']) !!}
-                    <div class="col-sm-6 ">
-                        {!! Form::text('employeeID_1', old('employeeID_1'), ['class' => 'form-control','placeholder'=>'Enter Badge ID'])!!}
-                        <p class="help-block"></p>
-                        @if($errors->has('employeeID_1'))
-                            <p class="help-block">
-                                {{ $errors->first('employeeID_1') }}
-                            </p>
-                        @endif
-                    </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-4 form-group">
+                {!! Form::label('exposedEmployeeName', 'Exposed Employee Name', ['class' => 'col-sm-4 control-label']) !!}
+                <div class="col-sm-6 ">
+                    {!! Form::text('exposedEmployeeName', old('exposedEmployeeName'), ['class' => 'form-control'])!!}
+                    <p class="help-block"></p>
+                    @if($errors->has('exposedEmployeeName'))
+                        <p class="help-block">
+                            {{ $errors->first('exposedEmployeeName') }}
+                        </p>
+                    @endif
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-4 form-group">
-                    {!! Form::label('assignmentBiological', 'Assignment', ['class' => 'col-sm-4 control-label']) !!}
-                    <div class="col-sm-6 ">
-                        {!! Form::text('assignmentBiological', old('assignmentBiological'), ['class' => 'form-control'])!!}
-                        <p class="help-block"></p>
-                        @if($errors->has('assignmentBiological'))
-                            <p class="help-block">
-                                {{ $errors->first('assignmentBiological') }}
-                            </p>
-                        @endif
-                    </div>
-                </div>
-
-                <div class="col-sm-4 form-group">
-                    {!! Form::label('shift', 'Shift', ['class' => 'col-sm-4 control-label']) !!}
-                    <div class="col-sm-6">
-                        {!! Form::select('shift',[
-                      'A' => 'A',
-                      'B' => 'B',
-                      'C' => 'C',
-                      'DIV' => 'DIV'], ['class' => 'form-control'])!!}
-                        <p class="help-block"></p>
-                        @if($errors->has('shift'))
-                            <p class="help-block">
-                                {{ $errors->first('shift') }}
-                            </p>
-                        @endif
-                    </div>
-                </div>
-                <div class="col-sm-4 form-group">
-                    {!! Form::label('epcrIncidentNum', 'EPCR Incident#', ['class' => 'col-sm-4 control-label']) !!}
-                    <div class="col-sm-6 ">
-                        {!! Form::text('epcrIncidentNum', old('epcrIncidentNum'), ['class' => 'form-control','placeholder'=>'Enter Incident Num'])!!}
-                        <p class="help-block"></p>
-                        @if($errors->has('epcrIncidentNum'))
-                            <p class="help-block">
-                                {{ $errors->first('epcrIncidentNum') }}
-                            </p>
-                        @endif
-                    </div>
+            <div class="col-sm-4 form-group">
+                {!! Form::label('dateOfExposure', 'Date of Exposure', ['class' => 'col-sm-4 control-label']) !!}
+                <div class="col-sm-6 ">
+                    {!! Form::text('dateOfExposure', old('dateOfExposure'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
+                    <p class="help-block"></p>
+                    @if($errors->has('dateOfExposure'))
+                        <p class="help-block">
+                            {{ $errors->first('dateOfExposure') }}
+                        </p>
+                    @endif
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-4 form-group">
-                    {!! Form::label('idcoNumber', 'Primary IDCO #', ['class' => 'col-sm-4 control-label']) !!}
-                    <div class="col-sm-6 ">
-                        {!! Form::text('idcoNumber', old('idcoNumber'), ['class' => 'form-control','placeholder'=>'Enter IDCO Badge ID'])!!}
-                        <p class="help-block"></p>
-                        @if($errors->has('idcoNumber'))
-                            <p class="help-block">
-                                {{ $errors->first('idcoNumber') }}
-                            </p>
-                        @endif
-                    </div>
+            <div class="col-sm-4 form-group">
+                {!! Form::label('employeeID_1', 'Employee ID#', ['class' => 'col-sm-4 control-label']) !!}
+                <div class="col-sm-6 ">
+                    {!! Form::text('employeeID_1', old('employeeID_1'), ['class' => 'form-control','placeholder'=>'Enter Badge ID'])!!}
+                    <p class="help-block"></p>
+                    @if($errors->has('employeeID_1'))
+                        <p class="help-block">
+                            {{ $errors->first('employeeID_1') }}
+                        </p>
+                    @endif
                 </div>
-                <div class="col-sm-4 form-group">
-                    {!! Form::label('todaysDate', 'Date', ['class' => 'col-sm-4 control-label']) !!}
-                    <div class="col-sm-6 ">
-                        {!! Form::text('todaysDate', old('todaysDate'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
-                        <p class="help-block"></p>
-                        @if($errors->has('todaysDate'))
-                            <p class="help-block">
-                                {{ $errors->first('todaysDate') }}
-                            </p>
-                        @endif
-                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 form-group">
+                {!! Form::label('assignmentBiological', 'Assignment', ['class' => 'col-sm-4 control-label']) !!}
+                <div class="col-sm-6 ">
+                    {!! Form::text('assignmentBiological', old('assignmentBiological'), ['class' => 'form-control'])!!}
+                    <p class="help-block"></p>
+                    @if($errors->has('assignmentBiological'))
+                        <p class="help-block">
+                            {{ $errors->first('assignmentBiological') }}
+                        </p>
+                    @endif
                 </div>
             </div>
 
-            <h4 style="padding-left:12px;"><u><strong>The following Checklist will follow:</strong></u></h4>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="form-group" , style="padding-left:12px;">
-                        {{ Form::checkbox('decontaminate', 1, null, ['id'=>'decontaminate', 'class' => 'className']) }}
-                        {{ Form::label('decontaminate', 'Decontaminate') }}
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="form-group" , style="padding-left:12px;">
-                        {{ Form::checkbox('callChi', 1, null, ['id'=>'callChi', 'class' => 'className' ]) }}
-                        {{ Form::label('callChi', 'Call CHI OUCH Nurse to determine type of exposure') }}
-                    </div>
+            <div class="col-sm-4 form-group">
+                {!! Form::label('shift', 'Shift', ['class' => 'col-sm-4 control-label']) !!}
+                <div class="col-sm-6">
+                    {!! Form::select('shift',[
+                  'A' => 'A',
+                  'B' => 'B',
+                  'C' => 'C',
+                  'DIV' => 'DIV'], ['class' => 'form-control'])!!}
+                    <p class="help-block"></p>
+                    @if($errors->has('shift'))
+                        <p class="help-block">
+                            {{ $errors->first('shift') }}
+                        </p>
+                    @endif
                 </div>
             </div>
+            <div class="col-sm-4 form-group">
+                {!! Form::label('epcrIncidentNum', 'EPCR Incident#', ['class' => 'col-sm-4 control-label']) !!}
+                <div class="col-sm-6 ">
+                    {!! Form::text('epcrIncidentNum', old('epcrIncidentNum'), ['class' => 'form-control','placeholder'=>'Enter Incident Num'])!!}
+                    <p class="help-block"></p>
+                    @if($errors->has('epcrIncidentNum'))
+                        <p class="help-block">
+                            {{ $errors->first('epcrIncidentNum') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 form-group">
+                {!! Form::label('idcoNumber', 'Primary IDCO #', ['class' => 'col-sm-4 control-label']) !!}
+                <div class="col-sm-6 ">
+                    {!! Form::text('idcoNumber', old('idcoNumber'), ['class' => 'form-control','placeholder'=>'Enter IDCO Badge ID'])!!}
+                    <p class="help-block"></p>
+                    @if($errors->has('idcoNumber'))
+                        <p class="help-block">
+                            {{ $errors->first('idcoNumber') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="col-sm-4 form-group">
+                {!! Form::label('todaysDate', 'Date', ['class' => 'col-sm-4 control-label']) !!}
+                <div class="col-sm-6 ">
+                    {!! Form::text('todaysDate', old('todaysDate'), array('class'=>'datepicker form-control','placeholder'=>'MM/DD/YYYY'))!!}
+                    <p class="help-block"></p>
+                    @if($errors->has('todaysDate'))
+                        <p class="help-block">
+                            {{ $errors->first('todaysDate') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+        </div>
+
+        <h4 style="padding-left:12px;"><u><strong>The following Checklist will follow:</strong></u></h4>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group" , style="padding-left:12px;">
+                    {{ Form::checkbox('decontaminate', 1, null, ['id'=>'decontaminate', 'class' => 'className']) }}
+                    {{ Form::label('decontaminate', 'Decontaminate') }}
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group" , style="padding-left:12px;">
+                    {{ Form::checkbox('callChi', 1, null, ['id'=>'callChi', 'class' => 'className' ]) }}
+                    {{ Form::label('callChi', 'Call CHI OUCH Nurse to determine type of exposure') }}
+                </div>
+            </div>
+        </div>
 
         <div class="panel-group" id="accordion">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Please Click Here In Case of True Exposure</a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Please Click Here In Case
+                            of True Exposure</a>
                     </h4>
                 </div>
                 <div id="collapse1" class="panel-collapse collapse">
@@ -178,7 +179,8 @@
                             </div>
                         </div>
                         <div class="col-sm-2">
-                            <a class="btn btn-success dropdown-toggle col-sm-12" type="button" href="fillablepdfs\(Exposure PDF) OFD 184 State Infectious Disease Exposure Report.pdf"
+                            <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
+                               href="fillablepdfs\(Exposure PDF) OFD 184 State Infectious Disease Exposure Report.pdf"
                                download="(Exposure PDF) OFD 184 State Infectious Disease Exposure Report.pdf">
                                 <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                         </div>
@@ -194,7 +196,8 @@
                             </div>
                             <button type="button" class="btn btn-info dropdown-toggle col-sm-12" data-toggle="modal"
                                     data-target="#myModal">
-                                <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload</button>
+                                <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
+                            </button>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
@@ -246,7 +249,8 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Please Click Here In Case Of Potential Exposure</a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Please Click Here In Case
+                            Of Potential Exposure</a>
                     </h4>
                 </div>
                 <div id="collapse2" class="panel-collapse collapse">
@@ -307,16 +311,16 @@
             </div>
 
         </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <label class="col-sm-5"></label>
-                        <div class="btn-bottom">
-                            {!! Form::submit('Submit',['class' => 'btn btn-success']) !!}
-                            <a href="{{ route('biologicals.index') }}" class="btn btn-default">Cancel</a>
-                    </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label class="col-sm-5"></label>
+                <div class="btn-bottom">
+                    {!! Form::submit('Submit',['class' => 'btn btn-success']) !!}
+                    <a href="{{ route('biologicals.index') }}" class="btn btn-default">Cancel</a>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     {!! Form::close() !!}
 @stop
