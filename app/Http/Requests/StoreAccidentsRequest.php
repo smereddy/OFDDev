@@ -5,6 +5,7 @@ namespace App\Http\Requests;
 use App\Accident;
 use Illuminate\Foundation\Http\FormRequest;
 
+
 class StoreAccidentsRequest extends FormRequest
 {
     /**
@@ -14,7 +15,7 @@ class StoreAccidentsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
