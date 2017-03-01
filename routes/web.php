@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::resource('injuries', 'InjuriesController');
 
 Route::resource('accidents', 'AccidentsController');
+
+Route::resource('biologicals', 'BiologicalsController');
+
+Route::resource('hazmat', 'HazmatController');
