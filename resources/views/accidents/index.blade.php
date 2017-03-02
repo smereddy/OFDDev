@@ -166,10 +166,9 @@
                 </div>
                 <div class="alert alert-danger" align="center">
                     <div class="row">
-                        <label>Please submit all the forms by:<input type="text" class="form-control" id="datepicker2"
-                                                                     disabled></label>
+                        <label>Please submit all the forms by:<input type="text" class="form-control" id="datepicker2" disabled></label>
                     </div>
-                    <br>
+                    
                     <div class="row">
                         <div class="col-md-12">
                             <strong>
@@ -211,7 +210,7 @@
                 <div class="col-sm-12 form-group well well-sm">
                     <div class="col-sm-4">
                         <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
-                           href="{{ asset('Fillable PDFs/Accident Module/(Accident PDF) LRS 101 City of Omaha Vehicle Accident Report.pdf') }}">
+                           href="Fillable PDFs\Accident Module\(Accident PDF) LRS 101 City of Omaha Vehicle Accident Report.pdf" download="(Accident PDF) LRS 101 City of Omaha Vehicle Accident Report">
                             <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                     </div>
                     <div class="col-sm-4">
@@ -249,7 +248,7 @@
                     <div class="col-sm-4">
 
                         <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
-                           href="Fillable_PDFs\Accident Module\(Accident PDF) OFD 025a Accident Intradepartmental Communication - Driver.pdf"
+                           href="Fillable PDFs\Accident Module\(Accident PDF) OFD 025a Accident Intradepartmental Communication - Driver.pdf"
                            download="(Accident PDF) OFD 025a Accident Intradepartmental Communication - Driver.pdf">
                             <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                     </div>
@@ -268,7 +267,7 @@
                     <div class="col-sm-4">
 
                         <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
-                           href="Fillable_PDFs\Accident Module\(Accident PDF) OFD 025b Accident Intradepartmental Communication - Supervisor.pdf"
+                           href="Fillable PDFs\Accident Module\(Accident PDF) OFD 025b Accident Intradepartmental Communication - Supervisor.pdf"
                            download="(Accident PDF) OFD 025b Accident Intradepartmental Communication - Supervisor.pdf">
                             <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                     </div>
@@ -287,7 +286,7 @@
                     <div class="col-sm-4">
 
                         <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
-                           href="Fillable_PDFs\Accident Module\(Accident PDF) OFD 025c Accident Intradepartmental Communication - Other Personnel.pdf"
+                           href="Fillable PDFs\Accident Module\(Accident PDF) OFD 025c Accident Intradepartmental Communication - Other Personnel.pdf"
                            download="(Accident PDF) OFD 025c Accident Intradepartmental Communication - Other Personnel.pdf">
                             <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                     </div>
@@ -306,7 +305,7 @@
                     <div class="col-sm-4">
 
                         <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
-                           href="Fillable_PDFs\Accident Module\(Accident PDF) OFD 31 Lost, Damaged or Stolen Equipment Report.pdf"
+                           href="Fillable PDFs\Accident Module\(Accident PDF) OFD 31 Lost, Damaged or Stolen Equipment Report.pdf"
                            download="(Accident PDF) OFD 31 Lost, Damaged or Stolen Equipment Report.pdf">
                             <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                     </div>
@@ -325,7 +324,7 @@
                 <div class="col-sm-12 form-group well well-sm">
                     <div class="col-sm-4">
                         <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
-                           href="Fillable_PDFs\Accident Module\(Accident PDF) OFD 127 Request for Services.pdf"
+                           href="Fillable PDFs\Accident Module\(Accident PDF) OFD 127 Request for Services.pdf"
                            download="(Accident PDF) OFD 127 Request for Services.pdf">
                             <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                     </div>
@@ -345,7 +344,7 @@
                     <div class="col-sm-4">
 
                         <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
-                           href="Fillable_PDFs\Accident Module\(Accident PDF) DR 41 State of Nebraska DMV Vehicle Accident Report.pdf"
+                           href="Fillable PDFs\Accident Module\(Accident PDF) DR 41 State of Nebraska DMV Vehicle Accident Report.pdf"
                            download="(Accident PDF) DR 41 State of Nebraska DMV Vehicle Accident Report.pdf">
                             <i class="fa fa-download" aria-hidden="true"></i> Download</a>
                     </div>
