@@ -10,11 +10,10 @@ Homestead.json
 public/storage
 public/hot
 storage/*.key
-.env.*.php
-.env.php
 vendor/
 node_modules/
 npm-debug.log
 /public/uploads/
 public/uploads/thumb/
 /resources/views/vendor/
+
