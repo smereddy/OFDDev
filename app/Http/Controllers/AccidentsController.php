@@ -4,89 +4,53 @@ namespace App\Http\Controllers;
 
 use App\Accident;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreAccidentsRequest;
 
 class AccidentsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    protected $request;
-
-    public function __construct(Request $request) {
-        $this->request = $request;
-    }
     public function index()
     {
         return view('accidents.index', compact('accidents'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function store(StoreAccidentsRequest $request)
     {
-        //
+        //$accident = $this->saveFiles($request);
+        Accident::create($request->all());
+
+        return redirect()->route('accidents.index');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function edit($id)
     {
-        $accident = $this->request->input('accident');
-        Accident::create($accident);
-        return redirect()->route('stations.index');
+        $accident = Accident::findOrFail($id);
+        return view('accidents.edit', compact('accident', ''));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Accident  $accident
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Accident $accident)
+    public function update(UpdateAccidentsRequest $request, $id)
     {
-        //
-    }
+        $request = $this->saveFiles($request);
+        $accident = Accident::findOrFail($id);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Accident  $accident
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Accident $accident)
-    {
-        //
-    }
+//        \DB::table('accidents')->insert([
+//                'station_id' => $station->id,
+//                'station_name' => $station->station_name,
+//                'station_number' => $station->station_number,
+//                'station_date' => $station->station_date,
+//                'address' => $station->address,
+//                'city' => $station->city,
+//                'zipcode' => $station->zipcode,
+//                'district' => $station->district,
+//                'vendor_id' => $station->vendor_id,
+//                'vendor_name' => $vendor_name,
+//                'grant_id' => $station->grant_id,
+//                'grant_name' => $grant_name,
+//                "created_at" =>  \Carbon\Carbon::now('America/Chicago'),
+//                "updated_at" => \Carbon\Carbon::now('America/Chicago') ]
+//        );
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Accident  $accident
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Accident $accident)
-    {
-        //
-    }
+        $accident->update($request->all());
+        return redirect()->route('accidents.index');
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Accident  $accident
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Accident $accident)
-    {
-        //
     }
 }

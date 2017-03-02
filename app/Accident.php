@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Accident extends Model
 {
+    public $timestamps = false;
+
     protected $fillable = [
         'ofd6aID',
         'accidentDate',
@@ -13,41 +16,22 @@ class Accident extends Model
         'driverID',
         'assignmentAccident',
         'appratus',
-        'swdLimit35',
-        'officerName',
-        'officerDepartment',
-        'officerBadgeNum',
-        'officerRbNum',
-        'User_Login_employeeID',
-        'OFD6_ofd6ID',
-        'createdAt',
-        'updatedAt',
-        'createdBy',
-        'updatedBy',
         'captainID',
-        'battalionChiefID',
-        'acOnDutyID',
-        'attachOFD25InterDept',
-        'pathOFD025InnterDept',
-        'attachLRS101',
-        'pathLRS101',
-        'attachOFD295',
-        'pathOFD295',
-        'attachOFD25aDriver',
-        'pathOFD25aDriver',
-        'attachOFD25aSupervisor',
-        'pathOFD25aSupervisor',
-        'attachOFD25aOthrPersnl',
-        'pathOFD25aOthrPrsnl',
-        'attachOFD31',
-        'pathOFD31',
-        'attachOFD127',
-        'pathOFD127',
-        'attachLawDeptInv',
-        'pathLawDeptInv',
-        'attachCompanyDayBk',
-        'pathCompanyDayBk',
-        'attachVehicleReport',
-        'pathVehicleReport'
-    ];
+        'battalionChiefID ',
+        'acOnDutyID'
+      ];
+
+    /**
+     * Set attribute to date format
+     * @param $input
+     */
+    public function setDateAccidentDate($input)
+    {
+        if ($input != null) {
+            $this->attributes['accidentDate'] = Carbon::createFromFormat('Y-m-d', $input)->format('Y-m-d');
+        } else {
+            $this->attributes['accidentDate'] = null;
+        }
+    }
+
 }

@@ -1,12 +1,9 @@
 <?php
-
 namespace App\Http\Requests;
 
-use App\Accident;
 use Illuminate\Foundation\Http\FormRequest;
 
-
-class StoreAccidentsRequest extends FormRequest
+class StoreHazmatRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +23,8 @@ class StoreAccidentsRequest extends FormRequest
     public function rules()
     {
         return [
-            'driverID' => 'required|max:255',
-            ];
+            'hazmat_document' => 'max:20480',
+            'createDate' => 'string:hazmat,createDate,'.$this->route('hazmat'),
+        ];
     }
 }

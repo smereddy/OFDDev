@@ -41,7 +41,7 @@
             </div>
         </a>
 
-        {{--<a href="{{ route('vehicles.index') }}">--}}
+        <a href="{{ route('biologicals.index') }}">
             <div class="col-md-3 large-category">
               <div class="thumbnail">
                 <div class="thumbnail-dash">
@@ -56,7 +56,7 @@
             </div>
         </a>
 
-        {{--<a href="{{ route('repairs.index') }}">--}}
+        <a href="{{ route('hazmat.index') }}">
             <div class="col-md-3 large-category">
           <div class="thumbnail">
             <div class="thumbnail-dash">

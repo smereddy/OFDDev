@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreStationsRequest;
+use App\Http\Requests\StoreHazmatRequest;
 use App\Http\Controllers\Traits\FileUploadTrait;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
@@ -34,7 +34,7 @@ class HazmatController extends Controller
 //        return view('stations.create', $relations);
 //    }
 //
-    public function store(StoreStationsRequest $request)
+    public function store(StoreHazmatRequest $request)
     {
         $request = $this->saveFiles($request);
 
