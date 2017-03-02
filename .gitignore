@@ -14,5 +14,5 @@ vendor/
 node_modules/
 npm-debug.log
 /public/uploads/
-public/uploads/thumb/
+.vscode/
 

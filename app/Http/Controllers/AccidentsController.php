@@ -10,7 +10,14 @@ class AccidentsController extends Controller
 {
     public function index()
     {
+        $accidents = Accident::all();
         return view('accidents.index', compact('accidents'));
+    }
+
+    public function create()
+    {
+
+        return view('accidents.create');
     }
 
     public function store(StoreAccidentsRequest $request)
@@ -25,6 +32,17 @@ class AccidentsController extends Controller
     {
         $accident = Accident::findOrFail($id);
         return view('accidents.edit', compact('accident', ''));
+    }
+
+    public function show($id)
+    {
+
+        $accident = Accident::findOrFail($id);
+
+        //show history code start
+        //below one line code is for storing all history related to the $id in variable, which is to be used to display in show page.
+        //show history code end
+        return view('accidents.show',compact('accident'));
     }
 
     public function update(UpdateAccidentsRequest $request, $id)
