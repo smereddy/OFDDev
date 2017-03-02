@@ -277,6 +277,27 @@
                                 {{ Form::checkbox('potOFD184', 1, null, ['id' => 'potOFD184', 'class'=>'className']) }}
                                 {{Form::label('potOFD184','Complete OFD 184')}}
                             </div>
+                            <div class="col-sm-2">
+                                <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
+                                   href="fillablepdfs\(Exposure PDF) OFD 184 State Infectious Disease Exposure Report.pdf"
+                                   download="(Exposure PDF) OFD 184 State Infectious Disease Exposure Report.pdf">
+                                    <i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="fileUpload upload btn btn-success">
+                                    {!! Form::file('trueOFD184', old('trueOFD184'), ['id' => 'upload' ,'class' => 'form-control']) !!}
+                                    {!! Form::hidden('trueOFD184_max_size', 20) !!}
+                                    @if($errors->has('trueOFD184'))
+                                        <p class="help-block">
+                                            {{ $errors->first('trueOFD184') }}
+                                        </p>
+                                    @endif
+                                </div>
+                                <button type="button" class="btn btn-info dropdown-toggle col-sm-12" data-toggle="modal"
+                                        data-target="#myModal">
+                                    <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
+                                </button>
+                            </div>
                         </div>
                         <div class="col-sm-2">
                             <a class="btn btn-success dropdown-toggle col-sm-12" type="button"
